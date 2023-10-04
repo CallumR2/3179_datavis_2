@@ -22,7 +22,7 @@
             "data": {
               "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/Global%20Electricity%20Statistics.csv"
             },
-            "key": "Country",
+            "key": "Countries",
             "fields": [
               "2020"
             ]
@@ -45,20 +45,26 @@
               "scale": {
                 "type": "linear",
                 "scheme": "plasma",
-                "domain": [0, 20]
+                "domain": [
+                  0,
+                  5,
+                  10,
+                  15,
+                  20
+                ]
               },
-              "title": "Electricity Consumption YYYY"
+              "title": "YYYY Consumption"
             },
             "tooltip": [
               {
-                "field": "properties.name",
+                "field": "properties.Name",
                 "type": "nominal",
-                "title": "Country"
+                "title": "State"
               },
               {
                 "field": "cons",
                 "type": "quantitative",
-                "title": "Consumption (W) YYYY"
+                "title": "YYYY Consumption"
               }
             ]
           }
@@ -67,10 +73,10 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/ne_110m.topojson",
+        "url": "https://raw.githubusercontent.com/CallumR2/3179_week9_homework/main/js/ne_110m.topojson",
         "format": {
           "type": "topojson",
-          "feature": "ne_110m_graticules_10"
+          "feature": "ne_110m_graticules_5"
         }
       },
       "mark": {
