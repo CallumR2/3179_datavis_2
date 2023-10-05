@@ -16,10 +16,13 @@
             "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/Global%20Electricity%20Statistics.csv"
           },
           "key": "Country",
-          "fields": ["2020"]
+          "fields": ["2021"]
         }
       },
-      {"calculate": "datum['2020'] + 0.1" , "as": "Consumption"}
+      {
+        "calculate": "datum['2021'] + 0.001",
+        "as": "Consumption"
+      }
     ],
     "mark": {"type": "geoshape"},
     "encoding": {
@@ -29,8 +32,9 @@
         "scale": {"type": "linear"}
       },
       "tooltip": [
-        {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+        {"field": "properties.NAME_LONG", "type": "nominal", "title": "Country"},
         {"field": "Consumption", "type": "quantitative"}
       ]
     }
   }
+  
