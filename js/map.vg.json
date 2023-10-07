@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Global Electricity Consumption",
+    "title": "Global Electricity Consumption (billion kWh)",
     "width": 800,
-    "height": 800,
+    "height": 400,
     "projection": {
         "type": "equirectangular"
     },
