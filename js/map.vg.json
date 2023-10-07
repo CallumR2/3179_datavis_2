@@ -30,7 +30,8 @@
             "mark": {
                 "type": "geoshape",
                 "fill": "grey",
-                "fillOpacity": 0.7
+                "fillOpacity": 0.7,
+                "stroke": "black"
             }
         },
         {
