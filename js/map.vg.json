@@ -1,91 +1,125 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Title",
+    "title": "Global Electricity Consumption",
     "width": 800,
     "height": 400,
-    "projection": {
-        "type": "equalEarth"
-    },
+    "projection": {"type": "equalEarth"},
+    "params": [
+      {
+        "name": "Year",
+        "value": 2021,
+        "bind": {"input": "range", "min": 1980, "max": 2021, "step": 1}
+      }
+    ],
     "layer": [
-        {
-            "data": {
-              "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/oceans.topojson",
-              "format": {
-                "type": "topojson",
-                "feature": "oceans"
-              }
-            },
-            "mark": {
-              "type": "geoshape",
-              "fill": "skyblue"
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/mapshaper.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "grey", "fillOpacity": 0.7}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/oceans.topojson",
+          "format": {"type": "topojson", "feature": "oceans"}
+        },
+        "mark": {"type": "geoshape", "fill": "skyblue"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/mapshaper.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        },
+        "transform": [
+          {
+            "lookup": "properties.NAME",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/Global%20Electricity%20Statistics.csv"
+              },
+              "key": "Country",
+              "fields": [
+                "1980",
+                "1981",
+                "1982",
+                "1983",
+                "1984",
+                "1985",
+                "1986",
+                "1987",
+                "1988",
+                "1989",
+                "1990",
+                "1991",
+                "1992",
+                "1993",
+                "1994",
+                "1995",
+                "1996",
+                "1997",
+                "1998",
+                "1999",
+                "2000",
+                "2001",
+                "2002",
+                "2003",
+                "2004",
+                "2005",
+                "2006",
+                "2007",
+                "2008",
+                "2009",
+                "2010",
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021"
+              ]
             }
           },
-        {
-            "data": {
-                "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/mapshaper.topojson",
-                "format": {
-                    "type": "topojson",
-                    "feature": "ne_110m_admin_0_countries"
-                }
+          {"calculate": "datum[Year]", "as": "Consumption"},
+          {"calculate": "Year", "as": "year_param"}
+        ],
+        "mark": {"type": "geoshape"},
+        "encoding": {
+          "color": {
+            "field": "Consumption",
+            "type": "quantitative",
+            "scale": {"type": "linear", "scheme": "plasma"},
+            "title": "Electricity Consumption(billion kWh)"
+          },
+          "tooltip": [
+            {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+            {
+              "field": "Consumption",
+              "type": "quantitative",
+              "title": "Electricity Consumption (billion kWh)",
+              "format": ".3f"
             },
-            "transform": [
-                {
-                    "lookup": "properties.NAME",
-                    "from": {
-                        "data": {
-                            "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/Global%20Electricity%20Statistics.csv"
-                        },
-                        "key": "Country",
-                        "fields": [
-                            "2021"
-                        ]
-                    }
-                },
-                {
-                    "calculate": "datum['2021']",
-                    "as": "Consumption"
-                }
-            ],
-            "mark": {
-                "type": "geoshape"
-            },
-            "encoding": {
-                "color": {
-                    "field": "Consumption",
-                    "type": "quantitative",
-                    "scale": {
-                        "type": "linear"
-                    }
-                },
-                "tooltip": [
-                    {
-                        "field": "properties.NAME",
-                        "type": "nominal",
-                        "title": "Country"
-                    },
-                    {
-                        "field": "Consumption",
-                        "type": "quantitative"
-                    }
-                ]
-            }
-        },
-        {
-            "data": {
-              "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/mapshaper.topojson",
-              "format": {
-                "type": "topojson",
-                "feature": "ne_110m_graticules_20"
-              }
-            },
-            "mark": {
-              "type": "geoshape",
-              "fill": "clear",
-              "fillOpacity": 0,
-              "stroke": "black",
-              "strokeOpacity": 0.3
-            }
+            {"field": "year_param", "type": "quantitative", "title": "Year"}
+          ]
         }
-        
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/mapshaper.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_graticules_20"}
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "clear",
+          "fillOpacity": 0,
+          "stroke": "black",
+          "strokeOpacity": 0.3
+        }
+      }
     ]
-}
+  }
