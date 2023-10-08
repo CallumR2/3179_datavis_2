@@ -99,7 +99,7 @@
                 "format": ".3f"
             },
             {
-                "field": "year_param",
+                "field": "Year",
                 "type": "quantitative",
                 "title": "Year"
             }
