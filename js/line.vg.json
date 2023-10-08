@@ -84,6 +84,25 @@
             "scale": {
                 "scheme": "tableau10"
             }
-        }
+        },
+        "tooltip": [
+            {
+                "field": "Region",
+                "type": "nominal",
+                "title": "Region"
+            },
+            {
+                "aggregate": "sum",
+                "field": "Value",
+                "type": "quantitative",
+                "title": "Electrical Consumption (billion kWh)",
+                "format": ".3f"
+            },
+            {
+                "field": "year_param",
+                "type": "quantitative",
+                "title": "Year"
+            }
+        ]
     }
 }
