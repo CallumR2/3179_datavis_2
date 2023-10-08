@@ -166,6 +166,19 @@
                 "stroke": "black",
                 "strokeOpacity": 0.3
             }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": 3
+            },
+            "encoding": {
+                "x": 100,
+                "y": 100,
+                "text": "Countries in grey have no available data."
+            }
         }
     ]
 }
