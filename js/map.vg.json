@@ -112,6 +112,16 @@
             {"field": "year_param", "type": "quantitative", "title": "Year"}
           ]
         }
+      },
+         {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/mapshaper.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_graticules_20"}
+        },
+        "mark": {
+          "type": "geoshape",
+          "stroke": "black"
+        }
       }
     ]
   }
