@@ -120,8 +120,10 @@
         },
         "mark": {
           "type": "geoshape",
-          "stroke": "clear",
-          "strokeOpacity": 0
+          "stroke": "grey",
+          "strokeOpacity": 0.6,
+          "fill": "white",
+          "fillOpacity": 0
         }
       }
     ]
