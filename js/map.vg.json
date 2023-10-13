@@ -3,19 +3,12 @@
   "title": "Global Electricity Consumption (billion kWh)",
   "width": 800,
   "height": 400,
-  "projection": {
-    "type": "equalEarth"
-  },
+  "projection": {"type": "equalEarth"},
   "params": [
     {
       "name": "Year",
       "value": 2021,
-      "bind": {
-        "input": "range",
-        "min": 1980,
-        "max": 2021,
-        "step": 1
-      }
+      "bind": {"input": "range", "min": 1980, "max": 2021, "step": 1}
     }
   ],
   "layer": [
@@ -41,19 +34,13 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/oceans.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "oceans"
-        }
+        "format": {"type": "topojson", "feature": "oceans"}
       },
-      "mark": {
-        "type": "geoshape",
-        "fill": "skyblue"
-      }
+      "mark": {"type": "geoshape", "fill": "skyblue"}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/Global%20Electricity%20Statistics.csv",
+        "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/Global%20Electricity%20Statistics%20Norm.csv",
         "name": "CSV"
       },
       "transform": [
@@ -72,22 +59,27 @@
           "as": "geo"
         },
         {"filter": {"field": "Features", "equal": "net consumption"}},
-        {"calculate": "datum[Year]", "as": "norm_vals"}
+        {"calculate": "datum[Year] * 100", "as": "norm_vals"}
       ],
       "mark": {"type": "geoshape"},
       "encoding": {
-        "shape": {"field": "geo", "type": "geojson"},
-        "color": {
-          "field": "norm_vals",
-          "type": "quantitative",
-          "scale": {"type": "linear"}
-        },
+    "shape": {"field": "geo", "type": "geojson"},
+    "color": {
+        "field": "norm_vals",
+        "type": "quantitative",
+        "scale": {
+            "type": "linear",
+            "domain": [0, 50],
+            "scheme": "plasma"
+        }
+    },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
           {
             "field": "norm_vals",
             "type": "quantitative",
-            "title": "Net consumption"
+            "title": "Percentage of Global Consumption",
+            "format": ".2f"
           }
         ]
       }
@@ -103,8 +95,7 @@
         "stroke": "grey",
         "strokeWidth": 0.7,
         "strokeOpacity": 0.7
-      },
-      "encoding": {"tooltip": {"field": "note"}}
+      }
     }
   ]
 }
