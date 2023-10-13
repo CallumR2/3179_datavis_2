@@ -38,6 +38,20 @@
       },
       "mark": {"type": "geoshape", "fill": "skyblue"}
     },
+     {
+      "data": {
+        "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/mapshaper.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_20"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "clear",
+        "fillOpacity": 1,
+        "stroke": "grey",
+        "strokeWidth": 0.7,
+        "strokeOpacity": 0.7
+      }
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/Global%20Electricity%20Statistics%20Norm.csv",
@@ -82,20 +96,6 @@
             "format": ".2f"
           }
         ]
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/js/mapshaper.topojson",
-        "format": {"type": "topojson", "feature": "ne_110m_graticules_20"}
-      },
-      "mark": {
-        "type": "geoshape",
-        "fill": "clear",
-        "fillOpacity": 1,
-        "stroke": "grey",
-        "strokeWidth": 0.7,
-        "strokeOpacity": 0.7
       }
     }
   ]
