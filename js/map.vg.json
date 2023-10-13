@@ -92,6 +92,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "clear",
+        "fillOpacity": 0,
         "stroke": "grey",
         "strokeWidth": 0.7,
         "strokeOpacity": 0.7
