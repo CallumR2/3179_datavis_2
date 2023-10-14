@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Emissions vs Consumption",
+    "data": {
+      "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/global-data-on-sustainable-energy%20(1).csv"
+    },
+    "params": [
+      {
+        "name": "year_select",
+        "value": 2020,
+        "bind": {
+          "input": "range",
+          "min": 2000,
+          "max": 2020,
+          "step": 1,
+          "name": "Year Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {"filter": "datum.Year == year_select"},
+      {
+        "calculate": "datum.cons_fossil_fuels_(TWh) + datum.cons_nuclear(TWh) + datum.cons_renewables_(TWh)",
+        "as": "total_cons"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "total_cons",
+        "type": "quantitative",
+        "title": "Consumption",
+        "axis": {"tickCount": 7},
+        "scale": {"type": "log", "domain": [1, 10000000]}
+      },
+      "y": {
+        "field": "Value_co2_emissions_kt_by_country",
+        "type": "quantitative",
+        "axis": {"tickCount": 6},
+        "scale": {"type": "log", "domain": [1, 1000000]}
+      }
+    },
+    "layer": [
+      {
+        "mark": "circle",
+        "encoding": {
+          "size": {
+            "field": "Renewables (% equivalent primary energy)",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+              "range": [10, 50, 150, 200, 300, 400]
+            },
+            "legend": {"format": ".1s"}
+          },
+          "color": {"value": "blue"},
+          "opacity": {"value": 0.6},
+          "tooltip": [
+            {"field": "Country", "type": "nominal"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -12,
+          "fontSize": 11.5,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "text": {"field": "Country", "type": "nominal"},
+          "color": {"value": "black"},
+          "opacity": {"value": 1},
+          "tooltip": [
+            {"field": "Country", "type": "nominal"}
+          ]
+        }
+      }
+    ]
+  }
