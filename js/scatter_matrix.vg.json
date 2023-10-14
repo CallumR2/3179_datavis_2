@@ -48,7 +48,7 @@
                 },
                 "value": "grey"
               },
-              "opacity": {"value": 0.4},
+              "opacity": {"value": 0.7},
               "size": {"value": 100},
               "tooltip": [
                 {"field": "Entity", "type": "nominal", "title": "Country"},
@@ -108,12 +108,12 @@
                   },
                   "color": {
                     "condition": {
-                      "test": "datum.Entity === 'Qatar' || datum.Entity === 'Ethiopia' || datum.Entity === 'China' || datum.Entity === 'United States' || datum.Entity === 'Bermuda' || datum.Entity === 'Australia' || datum.Entity === 'Uganda'",
+                      "test": "datum.Entity === 'Ethiopia' || datum.Entity === 'China' || datum.Entity === 'United States' || datum.Entity === 'Bermuda' || datum.Entity === 'Australia' || datum.Entity === 'Uganda' || datum.Entity === 'Norway' || datum.Entity === 'Iceland'",
                       "value": "red"
                     },
                     "value": "grey"
                   },
-                  "opacity": {"value": 0.5},
+                  "opacity": {"value": 0.7},
                   "size": {"value": 100},
                   "tooltip": [
                     {"field": "Entity", "type": "nominal", "title": "Country"},
@@ -191,12 +191,12 @@
               },
               "color": {
                 "condition": {
-                  "test": "datum.Entity === 'Ethiopia' || datum.Entity === 'China' || datum.Entity === 'Burundi' || datum.Entity === 'Bermuda' || datum.Entity === 'Australia' || datum.Entity === 'Solomon Islands'",
+                  "test": "datum.Entity === 'Ethiopia' || datum.Entity === 'China' || datum.Entity === 'Burundi' || datum.Entity === 'Bermuda' || datum.Entity === 'Australia' || datum.Entity === 'Solomon Islands' || datum.Entity === 'Tajikistan'",
                   "value": "red"
                 },
                 "value": "grey"
               },
-              "opacity": {"value": 0.4},
+              "opacity": {"value": 0.7},
               "size": {"value": 100},
               "tooltip": [
                 {"field": "Entity", "type": "nominal", "title": "Country"},
@@ -262,7 +262,7 @@
                     },
                     "value": "grey"
                   },
-                  "opacity": {"value": 0.4},
+                  "opacity": {"value": 0.7},
                   "size": {"value": 100},
                   "tooltip": [
                     {"field": "Entity", "type": "nominal", "title": "Country"},
