@@ -1,31 +1,56 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>  
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 </head>
-<body>
 <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-<h2>Callum Rafferty - 3179 Homework Week 10</h2>
 
+<body>
 
-<div id="vis_1"></div>
-<div id="vis_2"></div>
-<script type="text/javascript">
+    <h1>Grid Elements</h1>
+    <p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or
+        <em>inline-grid</em>.
+    </p>
+    <p>Direct child element(s) of the grid container automatically becomes grid items.</p>
 
-  var vg_1 = "js/map.vg.json";
-  vegaEmbed('#vis_1', vg_1).then(function(result) {
-    // Access the Vega view instance as result.view
-  }).catch(console.error);
+    <div class="grid-container">
+        <div id="map" class="grid-item"></div>
+        <div class="grid-item">Text</div>
+        <div id="line" class="grid-item"></div>
+        <div class="grid-item">Text</div>
+        <div id="bubble" class="grid-item"></div>
+        <div class="grid-item">Text</div>
+        <div id="line" class="grid-item"></div>
+        <div class="grid-item">Text</div>
+        <div id="line" class="grid-item"></div>
+        <div class="grid-item">Text</div>
+    </div>
 
-  var vg_2 = "js/line.vg.json";
-  vegaEmbed('#vis_2', vg_2).then(function(result) {
-    // Access the Vega view instance as result.view
-  }).catch(console.error);
-</script>
+    <script type="text/javascript">
 
+        var map = "js/map.vg.json";
+        vegaEmbed('#map', map).then(function(result) {
+        }).catch(console.error);
+      
+        var line = "js/line.vg.json";
+        vegaEmbed('#line', line).then(function(result) {
+        }).catch(console.error);
+
+        var bubble = "js/bubble.vg.json";
+        vegaEmbed('#bubble', bubble).then(function(result) {
+        }).catch(console.error);
+
+        var scatter = "js/scatter_matrix.vg.json";
+        vegaEmbed('#scatter', scatter).then(function(result) {
+        }).catch(console.error);
+
+        var line = "js/line.vg.json";
+        vegaEmbed('#line', line).then(function(result) {
+        }).catch(console.error);
+      </script>
 </body>
+
 </html>
- 
