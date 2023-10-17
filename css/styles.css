@@ -4,6 +4,13 @@
     padding: 10px;
 }
 
+h1{
+    padding-left: 100;
+}
+
+p{
+    padding-left: 100;
+}
 .grid-item {
     padding: 20px;
     font-size: 16px;
