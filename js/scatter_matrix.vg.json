@@ -24,7 +24,7 @@
     {
       "hconcat": [
         {
-          "width": 500,
+          "width": 480,
           "height": 300,
           "mark": "circle",
           "encoding": {
@@ -38,7 +38,7 @@
             "y": {
               "field": "cons_per_capita_kWh_person",
               "type": "quantitative",
-              "scale": {"domain": [0, 500000], "type": "linear"},
+              "scale": {"domain": [0, 300000], "type": "linear"},
               "title": "Consumption per capita (kWh per person)"
             },
             "color": {
@@ -87,7 +87,7 @@
           }
         },
         {
-          "width": 515,
+          "width": 490,
           "height": 300,
           "layer": [
             {
@@ -154,8 +154,8 @@
             {
               "mark": {"type": "text", "fontWeight": "lighter", "fontSize": 16},
               "encoding": {
-                "x": {"value": 500},
-                "y": {"value": 300},
+                "x": {"value": 300},
+                "y": {"value": 150},
                 "text": {
                   "condition": {
                     "test": "year_select == 2020",
@@ -172,7 +172,7 @@
     {
       "hconcat": [
         {
-          "width": 500,
+          "width": 480,
           "height": 300,
           "mark": "circle",
           "encoding": {
@@ -235,7 +235,7 @@
           }
         },
         {
-          "width": 500,
+          "width": 480,
           "height": 300,
           "layer": [
             {
@@ -303,8 +303,8 @@
             {
               "mark": {"type": "text", "fontWeight": "lighter", "fontSize": 16},
               "encoding": {
-                "x": {"value": 500},
-                "y": {"value": 300},
+                "x": {"value": 300},
+                "y": {"value": 150},
                 "text": {
                   "condition": {
                     "test": "year_select == 2020",
