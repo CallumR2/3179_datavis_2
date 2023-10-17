@@ -4,7 +4,7 @@
   "params": [
     {
       "name": "year_select",
-      "value": 2000,
+      "value": 2020,
       "bind": {
         "input": "range",
         "min": 2000,
@@ -155,8 +155,8 @@
             {
               "mark": {"type": "text", "fontWeight": "lighter", "fontSize": 16},
               "encoding": {
-                "x": {"value": 400},
-                "y": {"value": 150},
+                "x": {"value": 275},
+                "y": {"value": 200},
                 "text": {
                   "condition": {
                     "test": "year_select == 2020",
@@ -304,8 +304,8 @@
             {
               "mark": {"type": "text", "fontWeight": "lighter", "fontSize": 16},
               "encoding": {
-                "x": {"value": 400},
-                "y": {"value": 150},
+                "x": {"value": 250},
+                "y": {"value": 200},
                 "text": {
                   "condition": {
                     "test": "year_select == 2020",
