@@ -63,7 +63,8 @@
             "field": "Year",
             "type": "quantitative",
             "axis": {"format": "d"},
-            "title": "Year"
+            "title": "Year",
+            "scale": {"domain": [1980, 2021]}
           },
           "y": {
             "aggregate": "sum",
