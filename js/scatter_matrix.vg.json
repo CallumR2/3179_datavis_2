@@ -24,8 +24,8 @@
     {
       "hconcat": [
         {
-          "width": 300,
-          "height": 150,
+          "width": 500,
+          "height": 300,
           "mark": "circle",
           "encoding": {
             "x": {
@@ -38,7 +38,7 @@
             "y": {
               "field": "cons_per_capita_kWh_person",
               "type": "quantitative",
-              "scale": {"domain": [0, 300000], "type": "linear"},
+              "scale": {"domain": [0, 500000], "type": "linear"},
               "title": "Consumption per capita (kWh per person)"
             },
             "color": {
@@ -88,7 +88,7 @@
         },
         {
           "width": 315,
-          "height": 150,
+          "height": 300,
           "layer": [
             {
               "mark": "circle",
@@ -154,8 +154,8 @@
             {
               "mark": {"type": "text", "fontWeight": "lighter", "fontSize": 16},
               "encoding": {
-                "x": {"value": 300},
-                "y": {"value": 150},
+                "x": {"value": 500},
+                "y": {"value": 300},
                 "text": {
                   "condition": {
                     "test": "year_select == 2020",
@@ -172,8 +172,8 @@
     {
       "hconcat": [
         {
-          "width": 300,
-          "height": 150,
+          "width": 500,
+          "height": 300,
           "mark": "circle",
           "encoding": {
             "x": {
@@ -235,8 +235,8 @@
           }
         },
         {
-          "width": 300,
-          "height": 150,
+          "width": 500,
+          "height": 300,
           "layer": [
             {
               "mark": "circle",
@@ -303,8 +303,8 @@
             {
               "mark": {"type": "text", "fontWeight": "lighter", "fontSize": 16},
               "encoding": {
-                "x": {"value": 300},
-                "y": {"value": 150},
+                "x": {"value": 500},
+                "y": {"value": 300},
                 "text": {
                   "condition": {
                     "test": "year_select == 2020",
