@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 700,
+    "width": 650,
     "height": 300,
     "title": "Reported Electrical Consumption by Region",
     "data": {
