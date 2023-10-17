@@ -18,7 +18,7 @@
     },
     {
       "name": "zoom_level",
-      "value": 120,
+      "value": 185,
       "bind": {
         "input": "range",
         "min": 120,
@@ -29,24 +29,24 @@
     },
     {
       "name": "translateXY",
-      "value": [350, 150],
+      "value": [500, 300],
       "update": "[clamp(translatePrevXY[0] + mouseChangeXY[0], -300, 1200), clamp(translatePrevXY[1] + mouseChangeXY[1], -200, 800)]"
     },
     {
       "name": "translatePrevXY",
-      "value": [350, 150],
+      "value": [500, 300],
       "on": [
         {"events": [{"type": "mousedown"}], "update": "translateXY"}
       ]
     },
     {
       "name": "mouseStartXY",
-      "value": [350, 150],
+      "value": [500, 300],
       "on": [{"events": [{"type": "mousedown"}], "update": "xy()"}]
     },
     {
       "name": "signal_mouse_drag_xy",
-      "value": [350, 150],
+      "value": [500, 300],
       "on": [
         {
           "events": [
