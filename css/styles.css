@@ -5,8 +5,8 @@
 }
 .grid-container-2 {
     display: grid;
-    grid-template-columns: 360px 360px 360px;
-    padding-left: 100px;
+    grid-template-columns: 375px 375px 375px;
+    padding-left: 20px;
 }
 h1{
     padding-left: 20px;
