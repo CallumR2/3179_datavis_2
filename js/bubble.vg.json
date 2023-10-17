@@ -30,14 +30,15 @@
       "field": "total_cons",
       "type": "quantitative",
       "title": "Electricity Consumption (TWh)",
-      "scale": {"type": "symlog", "domain": [0, 8000]},
-      "axis": {"values": [0, 100, 250, 500, 1000, 1500, 4000, 6000, 8000]}
+      "scale": {"type": "symlog", "domain": [0, 8010]},
+      "axis": {"values": [0, 50, 100, 250, 500, 1000, 2000, 4000, 8000]}
     },
     "y": {
       "field": "co2_emission_Mt",
       "type": "quantitative",
-      "scale": {"type": "symlog", "domain": [0, 11000]},
-      "title": "Co2 Emissions (Mt)"
+      "scale": {"type": "symlog", "domain": [0, 12000]},
+      "title": "Co2 Emissions (Mt)",
+      "axis": {"values": [0, 50, 100, 250, 500, 1000, 2000, 4000, 8000, 10000]}
     },
     "size": {"field": "percent_renewable", "type": "quantitative"},
     "tooltip": [
