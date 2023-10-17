@@ -42,9 +42,10 @@ p.sub{
     font-family: sans-serif;
 }
 
-body { 
-    max-width: 100%; 
-    font-family: sans-serif; 
-    line-height: 1.5; 
-    padding: 0 16px; 
-} 
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    line-height: 1.5;
+    padding: 0 16px;
+}
