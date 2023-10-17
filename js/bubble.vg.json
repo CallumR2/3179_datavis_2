@@ -10,62 +10,130 @@
   "params": [
     {
       "name": "year_select",
-      "value": 2019,
+      "value": 2000,
       "bind": {
         "input": "range",
         "min": 2000,
-        "max": 2019,
+        "max": 2020,
         "step": 1,
         "name": "Year Selection: "
       }
     }
   ],
   "transform": [
-    {"filter": "datum.Year == year_select"},
-    {"calculate": "datum.co2_emission_kt / 1000", "as": "co2_emission_Mt"}
-  ],
-  "mark": "circle",
-  "encoding": {
-    "x": {
-      "field": "total_cons",
-      "type": "quantitative",
-      "title": "Electricity Consumption (TWh)",
-      "scale": {"type": "symlog", "domain": [0, 8010]},
-      "axis": {"values": [0, 50, 100, 250, 500, 1000, 2000, 4000, 8000]}
+    {
+      "filter": "datum.Year == year_select"
     },
-    "y": {
-      "field": "co2_emission_Mt",
-      "type": "quantitative",
-      "scale": {"type": "symlog", "domain": [0, 12000]},
-      "title": "Co2 Emissions (Mt)",
-      "axis": {"values": [0, 50, 100, 250, 500, 1000, 2000, 4000, 8000, 10000]}
-    },
-    "size": {"field": "percent_renewable", "type": "quantitative"},
-    "tooltip": [
-      {"field": "Entity", "title": "Country: "},
-      {
-        "field": "total_cons",
-        "title": "Total Consumption (TWh)",
-        "format": ".2f"
-      },
-      {
-        "field": "co2_emission_Mt",
-        "title": "Co2 Emissions (Mt)",
-        "format": ".2f"
-      },
-      {
-        "field": "percent_renewable",
-        "title": "Percent of consumption from renewables",
-        "format": ".2f"
-      }
-    ],
-    "opacity": {"value": 0.7},
-    "color": {
-      "condition": {
-        "test": "datum.Entity === 'United States' || datum.Entity === 'India' || datum.Entity === 'China' || datum.Entity === 'Zimbabwe' || datum.Entity === 'Somalia' || datum.Entity === 'Australia'",
-        "value": "red"
-      },
-      "value": "grey"
+    {
+      "calculate": "datum.co2_emission_kt / 1000",
+      "as": "co2_emission_Mt"
     }
-  }
+  ],
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "x": {
+          "field": "total_cons",
+          "type": "quantitative",
+          "title": "Electricity Consumption (TWh)",
+          "scale": {
+            "type": "symlog",
+            "domain": [
+              0,
+              8010
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              50,
+              100,
+              250,
+              500,
+              1000,
+              2000,
+              4000,
+              8000
+            ]
+          }
+        },
+        "y": {
+          "field": "co2_emission_Mt",
+          "type": "quantitative",
+          "scale": {
+            "type": "symlog",
+            "domain": [
+              0,
+              12000
+            ]
+          },
+          "title": "Co2 Emissions (Mt)",
+          "axis": {
+            "values": [
+              0,
+              50,
+              100,
+              250,
+              500,
+              1000,
+              2000,
+              4000,
+              8000,
+              10000
+            ]
+          }
+        },
+        "size": {
+          "field": "percent_renewable",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Entity",
+            "title": "Country: "
+          },
+          {
+            "field": "total_cons",
+            "title": "Total Consumption (TWh)",
+            "format": ".2f"
+          },
+          {
+            "field": "co2_emission_Mt",
+            "title": "Co2 Emissions (Mt)",
+            "format": ".2f"
+          },
+          {
+            "field": "percent_renewable",
+            "title": "Percent of consumption from renewables",
+            "format": ".2f"
+          }
+        ],
+        "opacity": {
+          "value": 0.7
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Entity === 'United States' || datum.Entity === 'India' || datum.Entity === 'China' || datum.Entity === 'Zimbabwe' || datum.Entity === 'Somalia' || datum.Entity === 'Australia'",
+            "value": "red"
+          },
+          "value": "grey"
+        }
+      }
+    },
+    {
+      "mark": {"type": "text", "fontWeight": "lighter", "fontSize": 16},
+      "encoding": {
+        "x": {"value": 500},
+        "y": {"value": 200},
+        "text": {
+          "condition": {
+            "test": "year_select == 2020",
+            "value": "Data not available for 2020"
+          },
+          "value": ""
+        }
+      }
+    }
+  ]
 }

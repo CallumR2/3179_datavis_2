@@ -7,7 +7,7 @@
   "params": [
     {
       "name": "Year",
-      "value": 2020,
+      "value": 2000,
       "bind": {
         "input": "range",
         "min": 1980,
