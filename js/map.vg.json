@@ -136,7 +136,7 @@
           "field": "norm_vals",
           "type": "quantitative",
           "scale": {"type": "linear", "domain": [0, 50], "scheme": "plasma"},
-          "title": "Energy Consumption (% of global)"
+          "title": "Percent"
         },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},

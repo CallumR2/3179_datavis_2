@@ -86,7 +86,8 @@
         },
         "size": {
           "field": "percent_renewable",
-          "type": "quantitative"
+          "type": "quantitative",
+          "title": "Percent from Renewable"
         },
         "tooltip": [
           {
