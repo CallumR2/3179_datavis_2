@@ -12,7 +12,7 @@
 }
 
 .grid-item-map{
-    padding-left: 40px;
+    padding-left: 80px;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
@@ -24,6 +24,8 @@
 .grid-item-text {
     padding-top: 35px;
     padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     font-size: 16px;
     text-align: left;
     font-family: sans-serif;
