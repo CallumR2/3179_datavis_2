@@ -29,24 +29,24 @@
     },
     {
       "name": "translateXY",
-      "value": [500, 300],
-      "update": "[clamp(translatePrevXY[0] + mouseChangeXY[0], -300, 1200), clamp(translatePrevXY[1] + mouseChangeXY[1], -200, 800)]"
+      "value": [500, 250],
+      "update": "[clamp(translatePrevXY[0] + mouseChangeXY[0], -250, 1200), clamp(translatePrevXY[1] + mouseChangeXY[1], -200, 800)]"
     },
     {
       "name": "translatePrevXY",
-      "value": [500, 300],
+      "value": [500, 250],
       "on": [
         {"events": [{"type": "mousedown"}], "update": "translateXY"}
       ]
     },
     {
       "name": "mouseStartXY",
-      "value": [500, 300],
+      "value": [500, 250],
       "on": [{"events": [{"type": "mousedown"}], "update": "xy()"}]
     },
     {
       "name": "signal_mouse_drag_xy",
-      "value": [500, 300],
+      "value": [500, 250],
       "on": [
         {
           "events": [
