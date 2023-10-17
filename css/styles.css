@@ -1,15 +1,15 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 800px 600px;
+    grid-template-columns: 850px 350px;
     padding: 10px;
 }
 
 h1{
-    padding-left: 80px;
+    padding-left: 20px;
 }
 
 p.sub{
-    padding-left: 80px;
+    padding-left: 20px;
 }
 .grid-item {
     padding: 0px;
@@ -19,7 +19,7 @@ p.sub{
 }
 
 .grid-item-map{
-    padding-left: 40px;
+    padding-left: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
