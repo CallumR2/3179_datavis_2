@@ -3,12 +3,18 @@
   "title": "Global Electricity Consumption (billion kWh)",
   "width": 800,
   "height": 400,
-  "projection": {"type": "equalEarth", "scale": {"expr": "zoom_level"}},
+  "projection": {"type": "equalEarth", "scale": {"expr": "zoom_level"}, "translate": {"signal": "translate"}},
   "params": [
     {
       "name": "Year",
       "value": 2020,
-      "bind": {"input": "range", "min": 2000, "max": 2020, "step": 1, "name": "Year Select: "}
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2020,
+        "step": 1,
+        "name": "Year Select: "
+      }
     },
     {
       "name": "zoom_level",
@@ -16,10 +22,47 @@
       "bind": {
         "input": "range",
         "min": 140,
-        "max": 2000,
+        "max": 600,
         "step": 5,
         "name": "Zoom: "
       }
+    },
+    {
+      "name": "translate",
+      "value": [530, 100],
+      "update": "[clamp(translatemouseDown[0] + mouseChange[0], -300, 1200), clamp(translatemouseDown[1] + mouseChange[1], -200, 800)]"
+    },
+    {
+      "name": "translatemouseDown",
+      "value": [530, 250],
+      "on": [
+        {"events": [{"type": "mouseDown"}], "update": "translate"}
+      ]
+    },
+    {
+      "name": "mouseStart",
+      "value": [530, 250],
+      "on": [{"events": [{"type": "mouseDown"}], "update": "xy()"}]
+    },
+    {
+      "name": "mouseDrag",
+      "value": [530, 250],
+      "on": [
+        {
+          "events": [
+            {
+              "type": "mousemove",
+              "between": [{"type": "mouseDown"}, {"type": "mouseup"}]
+            }
+          ],
+          "update": "xy()"
+        }
+      ]
+    },
+    {
+      "name": "mouseChange",
+      "value": [0, 0],
+      "update": "[mouseDrag[0] - mouseStart[0], mouseDrag[1] - mouseStart[1]]"
     }
   ],
   "layer": [
