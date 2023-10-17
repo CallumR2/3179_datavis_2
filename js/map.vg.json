@@ -18,35 +18,35 @@
     },
     {
       "name": "zoom_level",
-      "value": 185,
+      "value": 90,
       "bind": {
         "input": "range",
-        "min": 120,
-        "max": 2000,
+        "min": 90,
+        "max": 1000,
         "step": 5,
         "name": "Zoom: "
       }
     },
     {
       "name": "translateXY",
-      "value": [500, 250],
+      "value": [250, 150],
       "update": "[clamp(translatePrevXY[0] + mouseChangeXY[0], -250, 1200), clamp(translatePrevXY[1] + mouseChangeXY[1], -200, 800)]"
     },
     {
       "name": "translatePrevXY",
-      "value": [500, 250],
+      "value": [250, 150],
       "on": [
         {"events": [{"type": "mousedown"}], "update": "translateXY"}
       ]
     },
     {
       "name": "mouseStartXY",
-      "value": [500, 250],
+      "value": [250, 150],
       "on": [{"events": [{"type": "mousedown"}], "update": "xy()"}]
     },
     {
       "name": "signal_mouse_drag_xy",
-      "value": [500, 250],
+      "value": [250, 150],
       "on": [
         {
           "events": [
