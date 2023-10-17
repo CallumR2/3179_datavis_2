@@ -18,7 +18,11 @@
 
     <div class="grid-container">
         <div id="map" class="grid-item"></div>
-        <div class="grid-item">Text</div>
+        <div class="grid-item">This map shows each countries energy consumption as a percentage of the
+            global consumption for different years ranging from 2000 to 2020. Sliding through the years, it is obvious
+            that the United States of America and China have been the worlds largest consumers of electrical energy
+            throughout the time period, while other countries relative consumptions reasonably consistent.
+        </div>
         <div id="line" class="grid-item"></div>
         <div class="grid-item">Text</div>
         <div id="bubble" class="grid-item"></div>
@@ -32,21 +36,21 @@
     <script type="text/javascript">
 
         var map = "js/map.vg.json";
-        vegaEmbed('#map', map, {actions: false}).then(function(result) {
+        vegaEmbed('#map', map, { actions: false }).then(function (result) {
         }).catch(console.error);
-      
+
         var line = "js/line.vg.json";
-        vegaEmbed('#line', line).then(function(result) {
+        vegaEmbed('#line', line).then(function (result) {
         }).catch(console.error);
 
         var bubble = "js/bubble.vg.json";
-        vegaEmbed('#bubble', bubble).then(function(result) {
+        vegaEmbed('#bubble', bubble).then(function (result) {
         }).catch(console.error);
 
         var scatter = "js/scatter_matrix.vg.json";
-        vegaEmbed('#scatter', scatter).then(function(result) {
+        vegaEmbed('#scatter', scatter).then(function (result) {
         }).catch(console.error);
-      </script>
+    </script>
 </body>
 
 </html>
