@@ -30,7 +30,8 @@
       "field": "total_cons",
       "type": "quantitative",
       "title": "Electricity Consumption (TWh)",
-      "scale": {"type": "symlog", "domain": [0, 8000]}
+      "scale": {"type": "symlog", "domain": [0, 8000]},
+      "axis": {"values": [0, 100, 250, 500, 1000, 1500, 4000, 6000, 8000]}
     },
     "y": {
       "field": "co2_emission_Mt",
