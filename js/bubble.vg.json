@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A bubbleplot showing horsepower on x, miles per gallons on y, and binned acceleration on size.",
-  "width": 600,
-  "height": 400,
+  "width": 700,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/global-data-on-sustainable-energy.csv",
     "name": "CSV"
