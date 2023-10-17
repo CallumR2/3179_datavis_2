@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1000,
-    "height": 500,
+    "width": 1400,
+    "height": 700,
     "title": "Reported Electrical Consumption by Region",
     "data": {
       "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/Global%20Electricity%20Statistics%20with%20zeros.csv"

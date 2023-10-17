@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Co2 Emissions against Electrical Consumption",
-  "width": 1000,
-  "height": 500,
+  "width": 1400,
+  "height": 700,
   "data": {
     "url": "https://raw.githubusercontent.com/CallumR2/3179_Homework_week10/main/data/global-data-on-sustainable-energy.csv",
     "name": "CSV"
