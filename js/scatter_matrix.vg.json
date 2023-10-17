@@ -25,7 +25,7 @@
     {
       "hconcat": [
         {
-          "width": 280,
+          "width": 230,
           "height": 200,
           "mark": "circle",
           "encoding": {
@@ -88,7 +88,7 @@
           }
         },
         {
-          "width": 295,
+          "width": 245,
           "height": 200,
           "layer": [
             {
@@ -173,7 +173,7 @@
     {
       "hconcat": [
         {
-          "width": 280,
+          "width": 230,
           "height": 200,
           "mark": "circle",
           "encoding": {
@@ -236,7 +236,7 @@
           }
         },
         {
-          "width": 280,
+          "width": 230,
           "height": 200,
           "layer": [
             {
