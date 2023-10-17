@@ -5,6 +5,13 @@
 }
 
 .grid-item {
+    padding: 20px;
+    font-size: 16px;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.grid-item-text {
     padding-top: 25px;
     padding: 20px;
     font-size: 16px;
