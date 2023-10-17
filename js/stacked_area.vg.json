@@ -16,8 +16,8 @@
         "as": "sourceName"
       }
     ],
-    "width": 1050,
-    "height": 500,
+    "width": 1000,
+    "height": 700,
     "mark": "area",
     "encoding": {
       "x": {
