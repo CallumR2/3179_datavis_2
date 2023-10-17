@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Global Electricity Consumption (billion kWh)",
+  "title": "Global Electricity Consumption (Percentage of total global consumption)",
   "width": 500,
   "height": 300,
   "projection": {"type": "equalEarth", "scale": {"expr": "zoom_level"}, "translate": {"signal": "translateXY"}},
@@ -143,7 +143,7 @@
           {
             "field": "norm_vals",
             "type": "quantitative",
-            "title": "Percentage of Global Consumption",
+            "title": "Percentage",
             "format": ".2f"
           }
         ]
