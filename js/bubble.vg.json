@@ -17,11 +17,6 @@
         "max": 2019,
         "step": 1,
         "name": "Year Selection: "
-      },
-      "style": {
-        "labelFont": "Arial", 
-        "labelFontSize": 12,  
-        "labelFontWeight": "normal"
       }
     }
   ],
