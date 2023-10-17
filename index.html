@@ -32,7 +32,7 @@
     <script type="text/javascript">
 
         var map = "js/map.vg.json";
-        vegaEmbed('#map', map).then(function(result) {
+        vegaEmbed('#map', map, {actions: true}).then(function(result) {
         }).catch(console.error);
       
         var line = "js/line.vg.json";
