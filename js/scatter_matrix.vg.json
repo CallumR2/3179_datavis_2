@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Investigating relationships with GDP per capita",
   "params": [
     {
       "name": "year_select",

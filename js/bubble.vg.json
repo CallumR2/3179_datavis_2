@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A bubbleplot showing horsepower on x, miles per gallons on y, and binned acceleration on size.",
+  "title": "Co2 Emissions against Electrical Consumption",
   "width": 1000,
   "height": 500,
   "data": {
